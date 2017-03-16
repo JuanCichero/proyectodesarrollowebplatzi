@@ -58,5 +58,45 @@
       </div>
     </article>
   </section>
+  <footer class="footer">
+    <div class="contacto">
+      <img src="images\invie-white.png" alt="logotipo blanco">
+      <a href="tel:+58900000000" class=""><strong>Telefono</strong> <span>0000 0000</span></a>
+      <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
+    </div>
+    <form class="formulario">
+      <label for="nombre">Nombre: </label>
+      <input type="text" require id="nombre" name="nombre">
+      <label for="email">E-mail: </label>
+      <input type="email" require id="email" name="email">
+      <div class="sexo">
+        <label for="mujer">
+          <input type="radio" id="mujer" name="sexo" value="mujer">Mujer
+        </label>
+        <label for="hombre">
+          <input type="radio" name="sexo" value=hombre"">Hombre
+        </label>
+      </div>
+      <div class="intereses">
+        <label for="cotizacion">
+          <input type="checkbox" id="cotizacion" name="intereses" value="cotizacion">Cotización
+        </label>
+        <label for="reclamos">
+          <input type="checkbox" id="reclamos" name="intereses" value="reclamos">Reclamos
+        </label>
+        <label for="comentarios">
+          <input type="checkbox" id="comentarios" name="intereses" value="comentarios">Comentarios
+        </label>
+        <label for="otros">
+          <input type="checkbox" id="otros" name="intereses" value="otros">Otros
+        </label>
+      </div>
+      <div class="">
+        <label for="asunto">Asunto</label>
+        <textarea name="name" id="asunto" rows="7" cols="30"></textarea>
+        <input type="sumbit" name="" value="enviar">Enviar
+      </div>
+    </form>
+  </footer>
 </body>
 </html>
