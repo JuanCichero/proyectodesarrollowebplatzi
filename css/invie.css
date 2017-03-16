@@ -105,7 +105,7 @@ body {
 
 .footer {
   background-color: #273B47;
-  margin-top: 50px;
+  margin: 50px 0 0 0;
 }
 
 .contacto {
@@ -161,4 +161,28 @@ body {
 .formulario input, .formulario label {
   margin-bottom: 10px;
   margin-top: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  background-color: #273B47;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+td {
+  padding: 20px;
+}
+
+table, th, td {
+  border: 1px solid #273B47;
+  border-collapse: collapse;
+}
+
+.descripcion {
+  width: 50%;
 }
