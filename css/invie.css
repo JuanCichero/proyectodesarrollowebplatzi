@@ -2,13 +2,51 @@ body {
   font-family: 'Allerta', sans-serif;
   margin: 0;
 }
+table {
+  width: 100%;
+  margin: 50px 0;
+}
+
+th {
+  background-color: #273B47;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+td {
+  padding: 20px;
+}
+
+table, th, td {
+  border: 1px solid #273B47;
+  border-collapse: collapse;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.contenedor {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.background {
+  background-image: url("../images/background.png");
+  background-size: cover;
+}
 
 .button {
-  border-radius: 5px;
+  border-radius: 12px;
   border: none;
-  background-color: #FD324E;
+  background: linear-gradient(to left, #FE344E, #FF7250);
   color: white;
-  padding: 7px;
+  padding: 7px 15px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .titulo {
@@ -16,6 +54,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 0;
   margin-top: 70px;
+}
+
+.titulo span {
+  text-decoration: underline;
 }
 
 .title-a {
@@ -26,10 +68,12 @@ body {
 .title-b {
   font-size: 50px;
   margin-bottom: 20px;
+  margin-top: 78px;
 }
 
 .guitarras {
   color: #1F313C;
+  margin-bottom: 60px;
 }
 
 .guitarras h2 {
@@ -38,9 +82,9 @@ body {
 }
 
 .portada {
-  background-image: url("../images/background.png");
   color: white;
   padding: 20px;
+  height: 500px;
 }
 
 .portada button {
@@ -59,18 +103,19 @@ body {
   margin-left: 30px;
 }
 
-.logotipo {
-  display: inline-block;
+.menu li:before{
+  content: "∘";
+  color: white;
 }
 
-.contenedor {
-  width: 1000px;
-  margin: auto;
+.logotipo {
+  display: inline-block;
+  margin-left: 0;
 }
 
 .guitarra {
   padding: 10px;
-  margin: 10px;
+  margin: 10px 10px 40px 10px;
   border: 1px solid #1F313C;
   border-radius: 8px;
 }
@@ -79,16 +124,20 @@ body {
   padding: 0;
 }
 
+.guitarra.b {
+  height: 190px;
+}
+
 .right {
   float: right;
   position: relative;
-  top: -127px;
+  top: -99px;
 }
 
 .left {
   float: left;
   position: relative;
-  top: 80px;
+
 }
 
 .contenedor-guitarra-a {
@@ -97,6 +146,8 @@ body {
 
 .contenedor-guitarra-b {
   margin-left: 370px;
+  position: relative;
+  bottom: 70px;
 }
 
 .header {
@@ -105,7 +156,7 @@ body {
 
 .footer {
   background-color: #273B47;
-  margin: 50px 0 0 0;
+  padding: 40px 10px 20px 10px;
 }
 
 .contacto {
@@ -136,7 +187,6 @@ body {
 }
 
 .formulario {
-  padding: 40px 10px;
   display: flex;
   width: 500px;
 }
@@ -160,29 +210,17 @@ body {
 
 .formulario input, .formulario label {
   margin-bottom: 10px;
-  margin-top: 5px;
-}
-
-table {
-  width: 100%;
-}
-
-th {
-  background-color: #273B47;
-  color: white;
-  padding: 10px 20px;
-  text-align: left;
-}
-
-td {
-  padding: 20px;
-}
-
-table, th, td {
-  border: 1px solid #273B47;
-  border-collapse: collapse;
+  margin-top: 10px;
 }
 
 .descripcion {
   width: 50%;
+}
+
+input, textarea {
+  outline: 0;
+}
+
+input:focus, textarea:focus {
+  background: lightgrey;
 }
