@@ -30,7 +30,7 @@
     <div class="contenedor">
       <h1 class="titulo">Guitarras inviesibles</h1> <!-- título -->
       <h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3> <!-- resumen -->
-      <button type="button" name="button">Conoce más</button> <!-- botón -->
+      <button type="button" name="button" class="button">Conoce más</button> <!-- botón -->
     </div>
   </section>
   <section id="guitarras" class="guitarras contenedor"> <!-- guitarras -->
@@ -59,44 +59,48 @@
     </article>
   </section>
   <footer class="footer">
+    <div class="contenedor">
     <div class="contacto">
       <img src="images\invie-white.png" alt="logotipo blanco">
-      <a href="tel:+58900000000" class=""><strong>Telefono</strong> <span>0000 0000</span></a>
+      <a href="tel:+58900000000"><strong>Telefono</strong> <span>00000000</span></a>
       <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
     </div>
     <form class="formulario">
+      <div class="col1">
       <label for="nombre">Nombre: </label>
-      <input type="text" require id="nombre" name="nombre">
+      <input type="text" require id="nombre" name="nombre"/>
       <label for="email">E-mail: </label>
-      <input type="email" require id="email" name="email">
+      <input type="email" require id="email" name="email"/>
       <div class="sexo">
         <label for="mujer">
-          <input type="radio" id="mujer" name="sexo" value="mujer">Mujer
+          <input type="radio" id="mujer" checked name="sexo" value="mujer"/>Mujer
         </label>
         <label for="hombre">
-          <input type="radio" name="sexo" value=hombre"">Hombre
+          <input type="radio" name="sexo" value=hombre""/>Hombre
         </label>
       </div>
       <div class="intereses">
         <label for="cotizacion">
-          <input type="checkbox" id="cotizacion" name="intereses" value="cotizacion">Cotización
+          <input type="checkbox" id="cotizacion" checked name="intereses" value="cotizacion"/>Cotización
         </label>
         <label for="reclamos">
-          <input type="checkbox" id="reclamos" name="intereses" value="reclamos">Reclamos
+          <input type="checkbox" id="reclamos" name="intereses" value="reclamos"/>Reclamos
         </label>
         <label for="comentarios">
-          <input type="checkbox" id="comentarios" name="intereses" value="comentarios">Comentarios
+          <input type="checkbox" id="comentarios" name="intereses" value="comentarios"/>Comentarios
         </label>
         <label for="otros">
-          <input type="checkbox" id="otros" name="intereses" value="otros">Otros
+          <input type="checkbox" id="otros" name="intereses" value="otros"/>Otros
         </label>
       </div>
-      <div class="">
+    </div>
+      <div class="col2">
         <label for="asunto">Asunto</label>
         <textarea name="name" id="asunto" rows="7" cols="30"></textarea>
-        <input type="sumbit" name="" value="enviar">Enviar
+        <input type="submit" name="" value="Enviar" class="button"/>
       </div>
     </form>
+  </div>
   </footer>
 </body>
 </html>
