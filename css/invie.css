@@ -29,7 +29,7 @@ a {
 }
 
 .contenedor {
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   position: relative;
 }
@@ -223,4 +223,51 @@ input, textarea {
 
 input:focus, textarea:focus {
   background: lightgrey;
+}
+
+@media screen and (max-width: 800px) {
+  /*portada*/
+  .titulo {
+    font-size: 45px;
+    margin-top: 30px;
+  }
+  .title-a {
+    font-size: 18px;
+  }
+  .portada {
+    height: auto;
+  }
+  .portada .button {
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+  /*portada*/
+
+  /*guitarras*/
+  .guitarras {
+    text-align: center;
+  }
+
+  .right, .left {
+    float: none;
+    position: static;
+  }
+  .title-b {
+    margin: 0;
+  }
+  .contenedor-guitarra-a {
+    margin: auto;
+    padding: 0;
+  }
+  .contenedor-guitarra-b {
+    margin: auto;
+    position: static;
+  }
+  .guitarra.b {
+    height: auto;
+  }
+  .guitarra li {
+    list-style: none;
+  }
+  /*guitarras*/
 }
