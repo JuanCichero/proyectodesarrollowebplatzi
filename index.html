@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +5,7 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/invie.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css"/> -->
 </head>
 
@@ -40,7 +40,7 @@
   <section id="guitarras" class="guitarras contenedor"> <!-- guitarras -->
     <h2>Nuestras guitarras</h2> <!-- título -->
     <article class="guitarra"> <!-- guitarra 1 -->
-      <img class="right" src="images/invie-acustica.png" width="350" alt="Guitarra Invie Classic">
+      <img class="right" data-src="images/invie-acustica.png" width="350" alt="Guitarra Invie Classic">
       <div class="contenedor-guitarra-a">
         <h3 class="title-b">Invie Acustica</h3>
         <ol>
@@ -51,7 +51,7 @@
       </div>
     </article>
     <article class="guitarra b"> <!-- guitarra 2 -->
-      <img class="left" src="images/invie-classic.png" width="350" alt="Guitarra Invie Classic">
+      <img class="left" data-src="images/invie-classic.png" width="350" alt="Guitarra Invie Classic">
       <div class="contenedor-guitarra-b">
         <h3 class="title-b">Invie Classic</h3>
         <ol>
@@ -65,7 +65,7 @@
   <footer class="footer">
     <div class="contenedor">
       <div class="contacto">
-        <img src="images\invie-white.png" alt="logotipo blanco">
+        <img data-src="images\invie-white.png" alt="logotipo blanco">
         <a href="tel:+58900000000"><strong>Telefono</strong> <span>00000000</span></a>
         <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
       </div>
@@ -106,12 +106,30 @@
       </form>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
   <script type="text/javascript">
-    var $burguerButton = document.getElementById('burguer-button');
-    var $menu = document.getElementById('menu');
-    $burguerButton.addEventListener("touchstart", function (e) {
-      $menu.classList.toggle("active");
-    })
+
+  var consulta = window.matchMedia("(max-width: 500px)");
+  consulta.addListener(mediaQuery);
+  var $burguerButton = document.getElementById('burguer-button');
+  var $menu = document.getElementById('menu');
+  function toggleMenu() {
+    $menu.classList.toggle("active");
+    $burguerButton.classList.toggle("icon-cancel-circle");
+  }
+  function mediaQuery() {
+    if (consulta.matches) {
+      $burguerButton.addEventListener("touchstart", toggleMenu);
+    } else {
+      $burguerButton.removeEventListener("touchstart", toggleMenu);
+    }
+  }
+  mediaQuery();
+  // $burguerButton.addEventListener("touchstart", toggleMenu);
+  /*Lazy loading*/
+  var bLazy = new Blazy({
+    selector: "img"
+  });
   </script>
 </body>
 </html>
