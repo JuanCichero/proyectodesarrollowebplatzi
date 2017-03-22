@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/invie.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header id="header" class="header background"> <!-- header  -->
@@ -28,33 +29,47 @@
       </nav>
     </div>
   </header>
-  <div class="contenedor">
-    <table>
-      <thead>
-        <tr>
-          <th>Modelo</th>
-          <th>Precio</th>
-          <th>Descripción</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Ivie Acústica</td>
-          <td>$xxxxx</td>
-          <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        </tr>
-        <tr>
-          <td>Ivie Classic</td>
-          <td>$xxxxx</td>
-          <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        </tr>
-        <tr>
-          <td>Ivie Custom</td>
-          <td>$xxxxx</td>
-          <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        </tr>
-      </tbody>
-    </table>
+  <section class="tabla">
+    <div class="contenedor">
+      <table>
+        <thead>
+          <tr>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Descripción</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ivie Acústica</td>
+            <td>$xxxxx</td>
+            <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+            <td>Ivie Acústica</td>
+            <td>$xxxxx</td>
+            <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          </tr>
+          <tr>
+            <td>Ivie Classic</td>
+            <td>$xxxxx</td>
+            <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+            <td>Ivie Classic</td>
+            <td>$xxxxx</td>
+            <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          </tr>
+          <tr>
+            <td>Ivie Custom</td>
+            <td>$xxxxx</td>
+            <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+            <td>Ivie Custom</td>
+            <td>$xxxxx</td>
+            <td class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </div>
   <footer class="footer">
     <div class="contenedor">
@@ -100,12 +115,29 @@
       </form>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
   <script type="text/javascript">
+  var consulta = window.matchMedia("(max-width: 500px)");
+  consulta.addListener(mediaQuery);
   var $burguerButton = document.getElementById('burguer-button');
   var $menu = document.getElementById('menu');
-  $burguerButton.addEventListener("touchstart", function (e) {
+  function toggleMenu() {
     $menu.classList.toggle("active");
-  })
+    $burguerButton.classList.toggle("icon-cancel-circle");
+  }
+  function mediaQuery() {
+    if (consulta.matches) {
+      $burguerButton.addEventListener("touchstart", toggleMenu);
+    } else {
+      $burguerButton.removeEventListener("touchstart", toggleMenu);
+    }
+  }
+  mediaQuery();
+  // $burguerButton.addEventListener("touchstart", toggleMenu);
+  /*Lazy loading*/
+  var bLazy = new Blazy({
+    selector: "img"
+  });
   </script>
 </body>
 </html>

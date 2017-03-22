@@ -43,7 +43,7 @@ body {
   font-family: 'Allerta', sans-serif;
   margin: 0;
 }
-table {
+.tabla {
   width: 100%;
   margin: 50px 0;
 }
@@ -317,6 +317,15 @@ input:focus, textarea:focus {
   }
   /*portada*/
 
+  /*precios*/
+  .tabla .contenedor {
+    overflow: auto;
+    border: 1px solid #273B47;
+    width: 90vw;
+    margin: auto;
+  }
+  /*precios*/
+
   /*guitarras*/
 
   .guitarras {
@@ -417,6 +426,12 @@ input:focus, textarea:focus {
   .menu.active {
     left: 0;
     position: fixed;
+  }
+  .header .contenedor {
+    position: static;
+  }
+  .header{
+    position: static;
   }
   .burguer-button {
     position: fixed;
